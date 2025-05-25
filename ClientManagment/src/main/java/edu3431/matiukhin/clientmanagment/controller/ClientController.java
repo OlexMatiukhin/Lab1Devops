@@ -1,0 +1,59 @@
+package edu3431.matiukhin.clientmanagment.controller;
+
+
+
+
+import dto.ClientDTO;
+import dto.SaveClientDTO;
+import dto.UpdateClientDTO;
+import edu3431.matiukhin.clientmanagment.service.ClientService;
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1/clients")
+@AllArgsConstructor
+
+
+public class ClientController {
+    private final ClientService clientService;
+    @GetMapping
+    public List<ClientDTO> getAllClients() {
+        return clientService.getAllClients();
+    }
+
+    @PostMapping
+    public void  saveClient(@Valid @RequestBody SaveClientDTO client) {
+        clientService.saveClient(client);
+
+    }
+
+
+    @PutMapping
+    public void updateClient( @Valid @RequestBody UpdateClientDTO client) {
+        clientService.updateClient(client);
+    }
+
+
+    @GetMapping("/email/{email}")
+    public ClientDTO findClientByEmail(@PathVariable String email) {
+        return clientService.findClientByEmail(email);
+    }
+
+    @GetMapping("/id/{clientId}")
+    public ClientDTO findClientById(@PathVariable("clientId") Long id) {
+        return clientService.findClientById(id);
+    }
+
+
+
+    @DeleteMapping ("{email}")
+
+    public void deleteClientByEmail(@PathVariable String email) {
+        clientService.deleteClient(email);
+    }
+}
+
