@@ -34,8 +34,8 @@ private  final RestTemplate restTemplate;
                 .map(orderMapper::toOrderDTO) // Исправленный вызов метода
                 .collect(Collectors.toList());
 */
-        String urlProductById = "http://localhost:8082/api/v1/productsInCart/" + client.getId();
-        String ulrOrderId = "http://localhost:8081/api/v1/orders/" + client.getId();
+        String urlProductById = "http://PRODUCTINCARTMANAGMENT/api/v1/productsInCart/" + client.getId();
+        String ulrOrderId = "http://ORDERMANGER/api/v1/orders/" + client.getId();
 
         List<ProductInCartDTO> products = new ArrayList<>();
         List<OrderDTO> orders = null;

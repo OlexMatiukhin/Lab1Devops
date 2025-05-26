@@ -20,7 +20,7 @@ public class OrderMapper {
     private final RestTemplate restTemplate;
 
     public OrderDTO toOrderDTO(OrderModel order) {
-        String urlProductById = "http://localhost:8080/api/v1/clients/id/" + order.getClientId();
+        String urlProductById = "http://CLIENTMANAGMENT/api/v1/clients/id/" + order.getClientId();
         ClientDTO client = restTemplate.getForObject(urlProductById, ClientDTO.class);
         String clientFullName = client.getFirstName() + client.getLastName();
         List<OrderItemDTO> orderItemDTOS = order.getItems().stream().map(OrderItemMapper::toOrderItemDTO).collect(Collectors.toList());
