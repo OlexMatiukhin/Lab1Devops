@@ -35,7 +35,7 @@ public class ProductModel {
 
     @PrePersist
     @PreUpdate
-    public void calculateAge() {
+    public void calculateStatus() {
         if(count>0){
             status="В наявності";
         }

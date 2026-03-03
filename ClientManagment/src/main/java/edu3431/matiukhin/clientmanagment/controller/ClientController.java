@@ -9,16 +9,20 @@ import dto.UpdateClientDTO;
 import edu3431.matiukhin.clientmanagment.service.ClientService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.annotation.Documented;
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/api/v1/clients")
 @AllArgsConstructor
 
-
 public class ClientController {
+    @Autowired
     private final ClientService clientService;
     @GetMapping
     public List<ClientDTO> getAllClients() {

@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: native
+
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:/Users/sasha/Desktop/Institute/Microservices/Microservices5/config-repo
+    compatibility-verifier:
+      enabled: false
+server:
+  port: 8888

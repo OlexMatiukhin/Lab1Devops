@@ -2,17 +2,17 @@ package edu3431.matiukhin.ordermangment.service;
 
 
 
-import dto.OrderDTO;
-import dto.SaveOrderDTO;
-import dto.Status;
+import dto.*;
 
 import edu3431.matiukhin.ordermangment.exeption.ElementNotFoundInBaseExeption;
+import edu3431.matiukhin.ordermangment.mapper.OrderItemMapper;
 import edu3431.matiukhin.ordermangment.mapper.OrderMapper;
 import edu3431.matiukhin.ordermangment.model.OrderModel;
 import edu3431.matiukhin.ordermangment.repository.OrderRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,20 +21,44 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class OrderServiceImpl implements OrderService {
     OrderRepository orderRepository;
-
+    private final RestTemplate restTemplate;
     private final OrderMapper orderMapper;
+
+
+
 
 
 
     @Override
     public List<OrderDTO> getAllOrders() {
-        return orderRepository.findAll().stream().map(orderMapper::toOrderDTO).collect(Collectors.toList());
+        return orderRepository.findAll().stream()
+                .map(order -> {
+                    String clientName = fetchClientName(order.getClientId());
+                    List<OrderItemDTO> orderItemDTOS = order.getItems().stream()
+                            .map(OrderItemMapper::toOrderItemDTO).collect(Collectors.toList());
+                    return orderMapper.toOrderDTO(order, clientName,orderItemDTOS);
+                }).collect(Collectors.toList());
     }
+    private String fetchClientName(Long clientId) {
+        try {
+            ClientDTO client = restTemplate.getForObject(
+                    "http://CLIENTMANAGMENT/api/v1/clients/id/" + clientId, ClientDTO.class);
+            return client.getFirstName() + " " + client.getLastName();
+        } catch (Exception e) {
+            return "Unknown";
+        }
+    }
+
 
 
     @Override
     public List<OrderDTO> getOrdersByClientId(Long clientId) {
-        return orderRepository.findAllByClientId(clientId).stream().map(orderMapper::toOrderDTO).collect(Collectors.toList());
+        return orderRepository.findAllByClientId(clientId).stream().map(order -> {
+            String clientName = fetchClientName(order.getClientId());
+            List<OrderItemDTO> orderItemDTOS = order.getItems().stream()
+                    .map(OrderItemMapper::toOrderItemDTO).collect(Collectors.toList());
+            return orderMapper.toOrderDTO(order, clientName,orderItemDTOS);
+        }).collect(Collectors.toList());
     }
     @Override
     public void saveNewOrder(SaveOrderDTO order){

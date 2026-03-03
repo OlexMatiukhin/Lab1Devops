@@ -13,26 +13,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+@RestControllerAdvice
 public class GlobalExeptionHandler {
 
-    @RestControllerAdvice
-    public class GlobalExceptionHandler {
-
-        @ExceptionHandler(ElementNotFoundInBaseExeption.class)
-        public ResponseEntity<String> handleClientNotFound(ElementNotFoundInBaseExeption e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
-
-        @ExceptionHandler(CostExeption.class)
-        public ResponseEntity<String> handleCostLessThenNull(ElementNotFoundInBaseExeption e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        }
-
-        @ExceptionHandler(Exception.class)
-        public ResponseEntity<String> handleAllExceptions(Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Виникла помилка: " + e.getMessage());
-        }
+    @ExceptionHandler(ElementNotFoundInBaseExeption.class)
+    public ResponseEntity<String> handleClientNotFound(ElementNotFoundInBaseExeption e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 
+    @ExceptionHandler(CostExeption.class)
+    public ResponseEntity<String> handleCostLessThenNull(CostExeption e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleAllExceptions(Exception e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body("Виникла помилка: " + e.getMessage());
+    }
 }

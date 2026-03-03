@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Push on github">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/mapper/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/mapper/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/handler/GlobalExeptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/model/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/ClientManagment/eureka-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/ConfigServer">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/eureka-serv">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/kafka-lib">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2xaUOBFQingMODAgU30mY1z10KK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.ClientManagment/Dockerfile.executor": "Run",
+    "Docker.OrderMangment/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.clientmanagment: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.configserver: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.eureka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.ordermanagment: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.productmanagment: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.ProductManagmentApplicationTests.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ClientManagmentApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.KafkaLibApplication.executor": "Run",
+    "Spring Boot.Microservices5Application.executor": "Run",
+    "Spring Boot.OrderMangmentApplication.executor": "Run",
+    "Spring Boot.ProductInCartManagmentApplication.executor": "Run",
+    "Spring Boot.ProductManagmentApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sasha/Desktop/Institute/Microservices/SoftwareQuality8",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ClientManagment\src\main\java\edu3431\matiukhin\clientmanagment" />
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\OrderMangment\src\main\java\edu3431\matiukhin\ordermangment" />
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ProductInCartManagment\src\main\java\edu3431\matiukhin\productincartmanagment" />
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ProductManagment\src\main\java\edu3431\matiukhin\productmanagment" />
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\sharedDTO\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\eureka-server" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
+    <configuration name="ClientManagmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ClientManagment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.clientmanagment.ClientManagmentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ConfigServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.eureka.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaLibApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kafka-lib" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.kafkalib.KafkaLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaLibApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kafka-lib.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.kafkalib.KafkaLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Microservices5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Microservices5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.microservices5.Microservices5Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderMangmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="OrderMangment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.ordermangment.OrderMangmentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductInCartManagmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProductInCartManagment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.productincartmanagment.ProductInCartManagmentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductManagmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProductManagment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.productmanagment.ProductManagmentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.clientmanagment: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="clientmanagment" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.configserver: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="configserver" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.productmanagment: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="productmanagment" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.productmanagment: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.clientmanagment: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.configserver: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Spring Boot.ClientManagmentApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.KafkaLibApplication" />
+      <item itemvalue="Spring Boot.KafkaLibApplication (1)" />
+      <item itemvalue="Spring Boot.Microservices5Application" />
+      <item itemvalue="Spring Boot.OrderMangmentApplication" />
+      <item itemvalue="Spring Boot.ProductInCartManagmentApplication" />
+      <item itemvalue="Spring Boot.ProductManagmentApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.configserver: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.productmanagment: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.clientmanagment: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="" />
+      <created>1748175646828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748175646828</updated>
+      <workItem from="1748175648026" duration="6254000" />
+      <workItem from="1748182658630" duration="10747000" />
+      <workItem from="1748196331163" duration="969000" />
+      <workItem from="1748197883539" duration="228000" />
+      <workItem from="1748282619915" duration="2992000" />
+      <workItem from="1748286948269" duration="10198000" />
+      <workItem from="1748299404529" duration="1711000" />
+      <workItem from="1748375802265" duration="667000" />
+      <workItem from="1748431177001" duration="2948000" />
+      <workItem from="1748462927539" duration="1584000" />
+      <workItem from="1748516424874" duration="20000" />
+      <workItem from="1759044449168" duration="2744000" />
+      <workItem from="1772483006788" duration="1604000" />
+      <workItem from="1772484974198" duration="5956000" />
+      <workItem from="1772527204836" duration="6328000" />
+      <workItem from="1772534950247" duration="4901000" />
+      <workItem from="1772540022543" duration="12728000" />
+      <workItem from="1772552998040" duration="1111000" />
+      <workItem from="1772556850702" duration="939000" />
+      <workItem from="1772557925963" duration="495000" />
+      <workItem from="1773141854159" duration="3370000" />
+      <workItem from="1773616130007" duration="43000" />
+      <workItem from="1774465897946" duration="91000" />
+      <workItem from="1774466002832" duration="734000" />
+      <workItem from="1774466870426" duration="11341000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initiate project">
+      <option name="closed" value="true" />
+      <created>1748182697345</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748182697345</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initiate project">
+      <option name="closed" value="true" />
+      <created>1748182711221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748182711221</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Push on github">
+      <option name="closed" value="true" />
+      <created>1748282896640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748282896640</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Push on github">
+      <option name="closed" value="true" />
+      <created>1772558365497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772558365497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initiate project" />
+    <MESSAGE value="Push on github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push on github" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartService.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/ProductManagmentApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/mapper/ClientMapper.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java</url>
+          <line>15</line>
+          <properties class="edu3431.matiukhin.productmanagment.service.ProductService" method="getAllProducts">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

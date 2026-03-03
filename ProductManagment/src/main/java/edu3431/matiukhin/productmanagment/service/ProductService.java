@@ -5,11 +5,8 @@ import dto.AddProductsDTO;
 import dto.ProductDTO;
 import dto.SaveProductDTO;
 import dto.UpdateProductDTO;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-@Service
 
 public interface ProductService {
 

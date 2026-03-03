@@ -45,5 +45,6 @@ public class OrderModel {
 
         this.status = status;
         this.deliveryAddress = deliveryAddress;
+
     }
 }

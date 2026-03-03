@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ClientManagment/eureka-server" />
+    <file type="web" url="file://$PROJECT_DIR$/ConfigServer" />
+    <file type="web" url="file://$PROJECT_DIR$/eureka-serv" />
+    <file type="web" url="file://$PROJECT_DIR$/kafka-lib" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ClientManagment/pom.xml" />
+        <option value="$PROJECT_DIR$/OrderMangment/pom.xml" />
+        <option value="$PROJECT_DIR$/ProductInCartManagment/pom.xml" />
+        <option value="$PROJECT_DIR$/ProductManagment/pom.xml" />
+        <option value="$PROJECT_DIR$/sharedDTO/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka-lib/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigServer/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka-lib/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

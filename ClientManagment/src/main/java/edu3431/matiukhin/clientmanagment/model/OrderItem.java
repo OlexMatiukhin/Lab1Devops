@@ -21,14 +21,9 @@ public class OrderItem {
     @Id
     @GeneratedValue
     private Long id;
-
     private String productName;
     private int count;
     private Double totalPrice;
-
-
-
-
     private Long productId;
     @ManyToOne
     @JoinColumn(name = "order_id")
