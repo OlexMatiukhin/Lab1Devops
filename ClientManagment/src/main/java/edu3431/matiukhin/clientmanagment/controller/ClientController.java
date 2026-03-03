@@ -9,11 +9,13 @@ import dto.UpdateClientDTO;
 import edu3431.matiukhin.clientmanagment.service.ClientService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/api/v1/clients")
 @AllArgsConstructor
 

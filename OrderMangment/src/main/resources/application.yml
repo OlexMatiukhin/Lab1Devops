@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ordermanagment
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
+  endpoint:
+    health:
+      show-details: always

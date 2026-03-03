@@ -18,7 +18,7 @@ public class ProductInCartMapper {
     public ProductInCartDTO toProductInCartDTO(ProductInCartModel product) {
 
         System.out.println(product.getClientId());
-        String urlProductById = "http://CLIENTMANAGMENT/api/v1/clients/id/" + product.getClientId();
+        String urlProductById = "http://clientmanagment/api/v1/clients/id/" + product.getClientId();
          ClientDTO client = restTemplate.getForObject(urlProductById, ClientDTO.class);
         return new ProductInCartDTO(
                 product.getId(),

@@ -8,11 +8,13 @@ import dto.SaveOrderDTO;
 import edu3431.matiukhin.ordermangment.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/api/v1/orders")
 @AllArgsConstructor
 public class OrderController {
@@ -31,7 +33,7 @@ public class OrderController {
 
 
     @PostMapping("/save_order")
-    public void changeStatus( @RequestBody SaveOrderDTO order) {
+    public void saveOrder( @RequestBody SaveOrderDTO order) {
         orderService.saveNewOrder(order);
     }
 

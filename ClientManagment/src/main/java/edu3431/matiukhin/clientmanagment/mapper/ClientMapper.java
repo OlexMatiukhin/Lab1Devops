@@ -35,7 +35,7 @@ private  final RestTemplate restTemplate;
                 .collect(Collectors.toList());
 */
         String urlProductById = "http://PRODUCTINCARTMANAGMENT/api/v1/productsInCart/" + client.getId();
-        String ulrOrderId = "http://ORDERMANGER/api/v1/orders/" + client.getId();
+        String ulrOrderId = "http://ORDERMANAGMENT/api/v1/orders/" + client.getId();
 
         List<ProductInCartDTO> products = new ArrayList<>();
         List<OrderDTO> orders = null;

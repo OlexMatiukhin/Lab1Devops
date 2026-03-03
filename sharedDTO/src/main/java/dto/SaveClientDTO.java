@@ -4,10 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -15,7 +12,7 @@ import java.time.LocalDate;
 @Data
 @Builder
 @ToString
-
+@NoArgsConstructor
 public class SaveClientDTO
 {
     @NotNull

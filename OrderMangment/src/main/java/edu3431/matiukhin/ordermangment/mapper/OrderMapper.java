@@ -31,7 +31,6 @@ public class OrderMapper {
     public OrderModel toOrder(SaveOrderDTO order) {
         List<SaveOrderItemDTO> saveOrderItems = order.getItems();
         List<OrderItem> orderItems = new ArrayList<>();
-        System.out.println(saveOrderItems.size());
         OrderModel orderModel = new OrderModel();
         orderModel.setTotalPrice(order.getTotalPrice());
         orderModel.setStatus(Status.ACTIVE);

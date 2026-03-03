@@ -40,8 +40,6 @@ public class OrderItem {
         this.productName = productName;
         this.count = count;
         this.totalPrice = totalPrice;
-
-
         this.productId = productId;
 
     }

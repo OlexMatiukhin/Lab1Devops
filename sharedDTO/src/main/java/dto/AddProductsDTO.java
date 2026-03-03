@@ -3,9 +3,11 @@ package dto;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Data
+@NoArgsConstructor
 
 public class AddProductsDTO {
     private Long productId;

@@ -35,7 +35,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
     public void addItemToCart(Long productId, Long clientId, int quantity) {
 
 
-            String urlPorducts = "http://PRODUCTCONTROLLER/api/v1/products/" + productId;
+            String urlPorducts = "http://productmanagment/api/v1/products/" + productId;
             ProductDTO productDTO = restTemplate.getForObject(urlPorducts, ProductDTO.class);
             System.out.println(productDTO);
             if (productDTO == null) {
@@ -43,7 +43,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             }
 
 
-            String urlClientById = "http://CLIENTMANAGMENT/api/v1/clients/id/" + clientId;
+            String urlClientById = "http://clientmanagment/api/v1/clients/id/" + clientId;
             ClientDTO clientDTO = restTemplate.getForObject(urlClientById, ClientDTO.class);
             if (clientDTO == null) {
                 throw new RuntimeException("Client not found with id: " + clientId);
@@ -69,7 +69,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             catch (JsonProcessingException e) {
 
             }
-            String urlUpdateProduct = "http://PRODUCTCONTROLLER/api/v1/products";
+            String urlUpdateProduct = "http://productmanagment/api/v1/products";
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -141,7 +141,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             saveOrderDTO.setItems(orderItems);
             System.out.println();
 
-            String url = "http://ORDERMANGER/api/v1/orders/save_order";
+            String url = "http://ordermanagment/api/v1/orders/save_order";
 
             System.out.println(saveOrderDTO);
 
