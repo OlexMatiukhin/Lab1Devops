@@ -9,14 +9,9 @@ import dto.UpdateClientDTO;
 import edu3431.matiukhin.clientmanagment.service.ClientService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-=======
->>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.annotation.Documented;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +21,6 @@ import java.util.Map;
 @AllArgsConstructor
 
 public class ClientController {
-    @Autowired
     private final ClientService clientService;
     @GetMapping
     public List<ClientDTO> getAllClients() {

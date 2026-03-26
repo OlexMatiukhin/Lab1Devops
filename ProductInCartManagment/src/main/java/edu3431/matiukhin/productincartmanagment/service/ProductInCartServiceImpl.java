@@ -29,7 +29,6 @@ public class ProductInCartServiceImpl implements ProductInCartService {
     @Override
     public void addItemToCart(Long productId, Long clientId, int quantity) {
 
-<<<<<<< HEAD
         String urlPorducts = "http://productmanagment/api/v1/products/" + productId;
         ProductDTO productDTO = restTemplate.getForObject(urlPorducts, ProductDTO.class);
         if (productDTO == null) {
@@ -43,46 +42,9 @@ public class ProductInCartServiceImpl implements ProductInCartService {
         if (productDTO.getCount() >= quantity && quantity > 0) {
             UpdateProductDTO updateProductDTO = new UpdateProductDTO(productDTO.getId(), productDTO.getName(), productDTO.getCategory(), productDTO.getType(), productDTO.getPrice(), productDTO.getCount());
             ProductInCartModel productInCartSameType = productInCartRepository.findByProductIdAndClientId(productId, clientId);
-=======
-
-            String urlPorducts = "http://productmanagment/api/v1/products/" + productId;
-            ProductDTO productDTO = restTemplate.getForObject(urlPorducts, ProductDTO.class);
-            System.out.println(productDTO);
-            if (productDTO == null) {
-                throw new RuntimeException("Product not found with id: " + productId);
-            }
-
-
-            String urlClientById = "http://clientmanagment/api/v1/clients/id/" + clientId;
-            ClientDTO clientDTO = restTemplate.getForObject(urlClientById, ClientDTO.class);
-            if (clientDTO == null) {
-                throw new RuntimeException("Client not found with id: " + clientId);
-            }
-
-
-
-            UpdateProductDTO updateProductDTO = new UpdateProductDTO(productDTO.getId(),productDTO.getName(),productDTO.getCategory(),productDTO.getType(),productDTO.getPrice(),productDTO.getCount());
-            System.out.println(updateProductDTO);
-
-        ProductInCartModel productInCartSameType = productInCartRepository.findByProductIdAndClientId(productId, clientId);
-
-        if (productDTO.getCount() >= quantity && quantity > 0 ) {
->>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
             Double totalPrice = productDTO.getPrice() * quantity;
             int result = updateProductDTO.getCount() - quantity;
             updateProductDTO.setCount(result);
-<<<<<<< HEAD
-=======
-            System.out.println(updateProductDTO);
-            ObjectMapper mapper = new ObjectMapper();
-            try {
-                String json = mapper.writeValueAsString(updateProductDTO);
-                System.out.println(json);
-            }
-            catch (JsonProcessingException e) {
-
-            }
->>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
             String urlUpdateProduct = "http://productmanagment/api/v1/products";
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
@@ -154,24 +116,9 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             saveOrderDTO.setTotalPrice(totalPrice);
             saveOrderDTO.setClientId(clientId);
             saveOrderDTO.setItems(orderItems);
-<<<<<<< HEAD
             String url = "http://ordermanagment/api/v1/orders/save_order";
             restTemplate.postForObject(url, saveOrderDTO, OrderDTO.class);
         } else {
-=======
-            System.out.println();
-
-            String url = "http://ordermanagment/api/v1/orders/save_order";
-
-            System.out.println(saveOrderDTO);
-
-            restTemplate.postForObject(url,saveOrderDTO, OrderDTO.class);
-
-
-
-        }
-        else{
->>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
             throw new ElementNotFoundInBaseExeption("There is no product in cart of this client");
         }
     }
