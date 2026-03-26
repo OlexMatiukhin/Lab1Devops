@@ -32,6 +32,7 @@
         <module name="ProductManagment" />
         <module name="ProductInCartManagment" />
         <module name="ClientManagment" />
+<<<<<<< HEAD
       </profile>
       <profile name="Annotation profile for OrderMangment" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -40,6 +41,8 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
+=======
+>>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
         <module name="OrderMangment" />
       </profile>
     </annotationProcessing>

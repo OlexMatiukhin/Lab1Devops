@@ -35,6 +35,10 @@ services:
       - SPRING_CONFIG_IMPORT=configserver:http://configserver:8888
       - SPRING_PROFILES_ACTIVE=docker
     ports:
+<<<<<<< HEAD
+=======
+      # мапиш ТІЛЬКИ якщо хочеш ходити з хоста напряму
+>>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
       - "8080:8080"
 
   ordermanagment:
@@ -79,6 +83,7 @@ services:
     ports:
       - "8083:8083"
 
+<<<<<<< HEAD
   frontend:
     build:
       context: ./frontend
@@ -91,6 +96,8 @@ services:
       - productincartmanagment
       - productmanagment
 
+=======
+>>>>>>> ce92d58fb9c581b1b8206c89b2c21f6f98f5b812
   db:
     image: postgres:16
     environment:
