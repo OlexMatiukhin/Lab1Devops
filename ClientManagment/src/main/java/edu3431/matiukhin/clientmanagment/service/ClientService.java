@@ -8,6 +8,7 @@ import dto.SaveClientDTO;
 import dto.UpdateClientDTO;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface ClientService {
@@ -17,7 +18,7 @@ List<ClientDTO> getAllClients();
      void updateClient(UpdateClientDTO clientDTO);
      ClientDTO findClientById(Long id);
 
-
+    Map<Long, String> getClientNames(List<Long> ids);
 
     void deleteClient(String email);
 }

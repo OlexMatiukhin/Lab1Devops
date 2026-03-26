@@ -17,6 +17,7 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -105,4 +106,11 @@ public class ClientServiceImp implements ClientService {
     public void deleteClient(String email) {
         clientRepository.deleteClientByEmail(email);
     }
+    @Override
+    public Map<Long, String> getClientNames(List<Long> ids){
+        return clientRepository.findAllById(ids).stream().collect(Collectors.toMap(ClientModel::getId, client -> client.getFirstName() + " " + client.getLastName()));
+
+    }
+
+
 }

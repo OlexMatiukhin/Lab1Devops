@@ -5,26 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Push on github">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/mapper/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/mapper/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/model/OrderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/model/OrderModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/handler/GlobalExeptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/handler/GlobalExeptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/handler/GlobalExeptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/model/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,49 +87,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.ClientManagment/Dockerfile.executor": "Run",
-    "Docker.OrderMangment/Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml.clientmanagment: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.configserver: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.eureka: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.ordermanagment: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.productmanagment: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.ProductManagmentApplicationTests.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ClientManagmentApplication.executor": "Run",
-    "Spring Boot.ConfigServerApplication.executor": "Run",
-    "Spring Boot.EurekaApplication.executor": "Run",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.KafkaLibApplication.executor": "Run",
-    "Spring Boot.Microservices5Application.executor": "Run",
-    "Spring Boot.OrderMangmentApplication.executor": "Run",
-    "Spring Boot.ProductInCartManagmentApplication.executor": "Run",
-    "Spring Boot.ProductManagmentApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sasha/Desktop/Institute/Microservices/SoftwareQuality8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.ClientManagment/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.OrderMangment/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.clientmanagment: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.configserver: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.eureka: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.frontend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.ordermanagment: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.productmanagment: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductManagmentApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ClientManagmentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.KafkaLibApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Microservices5Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderMangmentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductInCartManagmentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductManagmentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/Desktop/Institute/Microservices/SoftwareQuality8&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ClientManagment\src\main\java\edu3431\matiukhin\clientmanagment" />
@@ -161,7 +152,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="ClientManagmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ClientManagment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu3431.matiukhin.clientmanagment.ClientManagmentApplication" />
@@ -251,19 +242,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.clientmanagment: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="clientmanagment" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.configserver: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -290,6 +268,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.productmanagment: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -304,9 +295,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.productmanagment: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.clientmanagment: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.configserver: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Spring Boot.ClientManagmentApplication" />
@@ -322,11 +313,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.configserver: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.productmanagment: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.clientmanagment: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +361,9 @@
       <workItem from="1773616130007" duration="43000" />
       <workItem from="1774465897946" duration="91000" />
       <workItem from="1774466002832" duration="734000" />
-      <workItem from="1774466870426" duration="11341000" />
+      <workItem from="1774466870426" duration="11513000" />
+      <workItem from="1774512705456" duration="13033000" />
+      <workItem from="1774531224229" duration="6157000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate project">
       <option name="closed" value="true" />
@@ -404,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772558365497</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Push on github">
+      <option name="closed" value="true" />
+      <created>1774481673820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774481673820</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,12 +426,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
-          <line>105</line>
+          <line>106</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
-          <line>56</line>
+          <line>48</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -445,7 +446,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -455,13 +456,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java</url>
           <line>7</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/service/ProductService.java</url>

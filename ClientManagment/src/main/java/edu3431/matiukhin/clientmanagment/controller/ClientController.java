@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.lang.annotation.Documented;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RefreshScope
@@ -39,6 +40,12 @@ public class ClientController {
     @PutMapping
     public void updateClient( @Valid @RequestBody UpdateClientDTO client) {
         clientService.updateClient(client);
+    }
+
+
+    @PostMapping("/names")
+    public Map<Long, String> getNames(@RequestBody List<Long> ids){
+        return clientService.getClientNames(ids);
     }
 
 
