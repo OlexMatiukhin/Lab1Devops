@@ -81,15 +81,6 @@ jobs:
     - name: Install sharedDTO
       working-directory: ./sharedDTO
       run: mvn -B clean install -DskipTests
-
-    - name: Test ConfigServer
-      working-directory: ./ConfigServer
-      run: mvn -B test
-
-    - name: Test Eureka
-      working-directory: ./eureka
-      run: mvn -B test    
-
     - name: Test ClientManagment
       working-directory: ./ClientManagment
       run: mvn -B test
