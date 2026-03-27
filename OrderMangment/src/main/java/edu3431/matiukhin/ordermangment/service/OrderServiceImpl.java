@@ -11,7 +11,6 @@ import edu3431.matiukhin.ordermangment.model.OrderModel;
 import edu3431.matiukhin.ordermangment.repository.OrderRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import org.hibernate.query.Order;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;

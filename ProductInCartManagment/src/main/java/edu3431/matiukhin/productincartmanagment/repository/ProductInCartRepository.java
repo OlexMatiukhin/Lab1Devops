@@ -11,5 +11,6 @@ import java.util.List;
 public interface ProductInCartRepository extends JpaRepository<ProductInCartModel, Long> {
     ProductInCartModel findByProductIdAndClientId(Long productId, Long clientId);
     List<ProductInCartModel> findAllByClientId(Long clientId);
+    List<ProductInCartModel> findByClientIdIn(List<Long> clientIds);
     void deleteById(Long id);
 }

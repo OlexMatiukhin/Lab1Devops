@@ -11,6 +11,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RefreshScope
@@ -27,6 +28,10 @@ public class ProductInCartController {
 
     }
 
+    @PostMapping("/by-clients")
+    public Map<Long, List<ProductInCartDTO>> getProductsByClientIds(@RequestBody List<Long> clientIds) {
+        return productInCartService.getProductsByClientIds(clientIds);
+    }
 
     @PostMapping("/add_product")
     public void addItemToCart( @RequestBody AddProductToCartDTO addProductToCartDTO) {
