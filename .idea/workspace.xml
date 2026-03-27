@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Workplace file has been fixed was eliminated!">
-      <change afterPath="$PROJECT_DIR$/ProductManagment/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/test/java/edu3431/matiukhin/productincartmanagment/ProductInCartManagmentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/test/java/edu3431/matiukhin/productincartmanagment/ProductInCartManagmentApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductManagment/src/test/java/edu3431/matiukhin/productmanagment/ProductManagmentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/test/java/edu3431/matiukhin/productmanagment/ProductManagmentApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/src/test/java/edu3431/matiukhin/eureka/EurekaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/test/java/edu3431/matiukhin/eureka/EurekaApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +92,7 @@
     "JUnit.EurekaApplicationTests.executor": "Run",
     "JUnit.ProductInCartManagmentApplicationTests.executor": "Run",
     "JUnit.ProductManagmentApplicationTests.executor": "Run",
+    "JUnit.ProductServiceImplTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -150,7 +145,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProductManagmentApplicationTests">
+  <component name="RunManager" selected="JUnit.ProductServiceImplTest">
     <configuration name="EurekaApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
       <extension name="coverage">
@@ -191,6 +186,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu3431.matiukhin.productmanagment" />
       <option name="MAIN_CLASS_NAME" value="edu3431.matiukhin.productmanagment.ProductManagmentApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductManagment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu3431.matiukhin.productmanagment.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu3431.matiukhin.productmanagment.service" />
+      <option name="MAIN_CLASS_NAME" value="edu3431.matiukhin.productmanagment.service.ProductServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -285,25 +295,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="frontend" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="JUnit.EurekaApplicationTests" />
       <item itemvalue="JUnit.ProductInCartManagmentApplicationTests" />
       <item itemvalue="JUnit.ProductManagmentApplicationTests" />
+      <item itemvalue="JUnit.ProductServiceImplTest" />
       <item itemvalue="Spring Boot.ClientManagmentApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
@@ -317,11 +314,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceImplTest" />
         <item itemvalue="JUnit.ProductManagmentApplicationTests" />
         <item itemvalue="JUnit.ProductInCartManagmentApplicationTests" />
         <item itemvalue="JUnit.EurekaApplicationTests" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -425,7 +422,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774625961770</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Workplace file has been fixed was eliminated!">
+      <option name="closed" value="true" />
+      <created>1774642930459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774642930459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
