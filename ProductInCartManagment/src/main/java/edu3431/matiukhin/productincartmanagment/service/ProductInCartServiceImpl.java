@@ -150,7 +150,19 @@ public class ProductInCartServiceImpl implements ProductInCartService {
         return response.getBody() != null ? response.getBody() : Collections.emptyMap();
     }
 
+    @Override
+    public Map<Long, List<ProductInCartDTO>> getProductsByClientIds(List<Long> clientIds) {
+        List<ProductInCartModel> items = productInCartRepository.findByClientIdIn(clientIds);
+        List<Long> uniqueClientIds = items.stream()
+                .map(ProductInCartModel::getClientId).distinct().collect(Collectors.toList());
+        Map<Long, String> names = fetchClientNames(uniqueClientIds);
 
-
-
+        return items.stream()
+                .collect(Collectors.groupingBy(
+                        ProductInCartModel::getClientId,
+                        Collectors.mapping(p -> productInCartMapper.toProductInCartDTO(
+                                p, names.getOrDefault(p.getClientId(), "Unknown")
+                        ), Collectors.toList())
+                ));
+    }
 }

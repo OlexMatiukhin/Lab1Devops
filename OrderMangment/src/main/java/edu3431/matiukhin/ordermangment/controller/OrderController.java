@@ -12,6 +12,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RefreshScope
@@ -22,6 +23,11 @@ public class OrderController {
     @GetMapping
     public List<OrderDTO> getAllOrders() {
         return orderService.getAllOrders();
+    }
+
+    @PostMapping("/by-clients")
+    public Map<Long, List<OrderDTO>> getOrdersByClientIds(@RequestBody List<Long> clientIds) {
+        return orderService.getOrdersByClientIds(clientIds);
     }
 
     @PostMapping("/change_status")
