@@ -3,10 +3,10 @@ spring:
     name: ordermanagment
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://configserver:8888
 
   cloud:
-    compatibility-verifier:
+    discovery:
       enabled: false
 
 management:
@@ -17,3 +17,6 @@ management:
   endpoint:
     health:
       show-details: always
+eureka:
+  client:
+    enabled: false

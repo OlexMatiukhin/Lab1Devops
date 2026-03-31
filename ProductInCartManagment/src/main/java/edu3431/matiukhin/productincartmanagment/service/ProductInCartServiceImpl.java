@@ -29,12 +29,12 @@ public class ProductInCartServiceImpl implements ProductInCartService {
     @Override
     public void addItemToCart(Long productId, Long clientId, int quantity) {
 
-        String urlPorducts = "http://productmanagment/api/v1/products/" + productId;
+        String urlPorducts = "http://productmanagment:8083/api/v1/products/" + productId;
         ProductDTO productDTO = restTemplate.getForObject(urlPorducts, ProductDTO.class);
         if (productDTO == null) {
             throw new RuntimeException("Product not found with id: " + productId);
         }
-        //String urlClientById = "http://clientmanagment/api/v1/clients/id/" + clientId;
+        //String urlClientById = "http://clientmanagment:8080/api/v1/clients/id/" + clientId;
         //ClientDTO clientDTO = restTemplate.getForObject(urlClientById, ClientDTO.class);
         /*if (clientDTO == null) {
             throw new RuntimeException("Client not found with id: " + clientId);
@@ -45,7 +45,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             Double totalPrice = productDTO.getPrice() * quantity;
             int result = updateProductDTO.getCount() - quantity;
             updateProductDTO.setCount(result);
-            String urlUpdateProduct = "http://productmanagment/api/v1/products";
+            String urlUpdateProduct = "http://productmanagment:8083/api/v1/products";
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -79,7 +79,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
     /*private String fetchClientName(Long clientId) {
         try {
             ClientDTO client = restTemplate.getForObject(
-                    "http://CLIENTMANAGMENT/api/v1/clients/id/" + clientId, ClientDTO.class);
+                    "http://clientmanagment:8080/api/v1/clients/id/" + clientId, ClientDTO.class);
             return client.getFirstName() + " " + client.getLastName();
         } catch (Exception e) {
             return "Unknown";
@@ -116,7 +116,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
             saveOrderDTO.setTotalPrice(totalPrice);
             saveOrderDTO.setClientId(clientId);
             saveOrderDTO.setItems(orderItems);
-            String url = "http://ordermanagment/api/v1/orders/save_order";
+            String url = "http://ordermanagment:8081/api/v1/orders/save_order";
             restTemplate.postForObject(url, saveOrderDTO, OrderDTO.class);
         } else {
             throw new ElementNotFoundInBaseExeption("There is no product in cart of this client");
@@ -137,7 +137,7 @@ public class ProductInCartServiceImpl implements ProductInCartService {
                 .getOrDefault(clientId, "Unknown");
     }
     private Map<Long, String> fetchClientNames(List<Long> clientIds) {
-        String url = "http://CLIENTMANAGMENT/api/v1/clients/names";
+        String url = "http://clientmanagment:8080/api/v1/clients/names";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<List<Long>> request = new HttpEntity<>(clientIds, headers);

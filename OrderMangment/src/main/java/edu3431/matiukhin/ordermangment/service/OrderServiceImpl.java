@@ -48,7 +48,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     private Map<Long, String> fetchClientNames(List<Long> clientIds) {
-        String url = "http://CLIENTMANAGMENT/api/v1/clients/names";
+        String url = "http://clientmanagment:8080/api/v1/clients/names";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<List<Long>> request = new HttpEntity<>(clientIds, headers);
@@ -65,7 +65,7 @@ public class OrderServiceImpl implements OrderService {
     /*private String fetchClientName(Long clientId) {
         try {
             ClientDTO client = restTemplate.getForObject(
-                    "http://CLIENTMANAGMENT/api/v1/clients/id/" + clientId, ClientDTO.class);
+                    "http://clientmanagment:8080/api/v1/clients/id/" + clientId, ClientDTO.class);
             return client.getFirstName() + " " + client.getLastName();
         } catch (Exception e) {
             return "Unknown";

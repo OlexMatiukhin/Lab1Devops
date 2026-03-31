@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientmanagment
+  namespace: ecommerce
+  labels:
+    app: clientmanagment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clientmanagment
+  template:
+    metadata:
+      labels:
+        app: clientmanagment
+    spec:
+      initContainers:
+       - name: wait-for-configserver
+         image: curlimages/curl:latest
+         command:
+           - sh
+           - -c
+           - |
+             until curl -fsS http://configserver:8888/actuator/health | grep -q UP; do
+               echo "Waiting for configserver..."; sleep 5;
+             done
+
+       - name: wait-for-db
+         image: postgres:16
+         command:
+             - sh
+             - -c
+             - |
+               until pg_isready -h db -U postgres; do
+                 echo "Waiting for db..."; sleep 5;
+               done
+      containers:
+        - name: clientmanagment
+          image: microservices5-clientmanagment:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              value: "configserver:http://configserver:8888"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "docker"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 180
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 15
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 210
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 15
+
+
