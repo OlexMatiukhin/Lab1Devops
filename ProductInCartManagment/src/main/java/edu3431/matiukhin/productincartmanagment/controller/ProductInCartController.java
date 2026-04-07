@@ -39,9 +39,9 @@ public class ProductInCartController {
     }
 
 
-    @GetMapping("{clientId}")
-    public List<ProductInCartDTO> getProductsByClientId(@PathVariable () Long clientId) {
-       return productInCartService.getProductsByClientId(clientId);
+    @GetMapping("/{clientId:\\d+}")
+    public List<ProductInCartDTO> getProductsByClientId(@PathVariable Long clientId) {
+        return productInCartService.getProductsByClientId(clientId);
     }
 
     @PostMapping("/buy_from_cart")

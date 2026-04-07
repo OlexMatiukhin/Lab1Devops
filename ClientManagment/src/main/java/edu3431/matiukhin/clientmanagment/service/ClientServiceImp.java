@@ -48,7 +48,7 @@ public class ClientServiceImp implements ClientService {
             headers.setContentType(MediaType.APPLICATION_JSON);
             HttpEntity<List<Long>> request = new HttpEntity<>(clientIds, headers);
             ResponseEntity<Map<Long, List<ProductInCartDTO>>> response = restTemplate.exchange(
-                    "http://PRODUCTINCARTMANAGMENT/api/v1/productsInCart/by-clients",
+                    "http://productincartmanagment:8082/api/v1/productsInCart/by-clients",
                     HttpMethod.POST, request,
                     new ParameterizedTypeReference<Map<Long, List<ProductInCartDTO>>>() {}
             );
@@ -64,7 +64,7 @@ public class ClientServiceImp implements ClientService {
             headers.setContentType(MediaType.APPLICATION_JSON);
             HttpEntity<List<Long>> request = new HttpEntity<>(clientIds, headers);
             ResponseEntity<Map<Long, List<OrderDTO>>> response = restTemplate.exchange(
-                    "http://ORDERMANAGMENT/api/v1/orders/by-clients",
+                    "http://ordermanagment:8081/api/v1/orders/by-clients",
                     HttpMethod.POST, request,
                     new ParameterizedTypeReference<Map<Long, List<OrderDTO>>>() {}
             );
@@ -77,7 +77,7 @@ public class ClientServiceImp implements ClientService {
     private List<ProductInCartDTO> fetchProductsInCart(Long clientId) {
         try {
             ResponseEntity<List<ProductInCartDTO>> response = restTemplate.exchange(
-                    "http://PRODUCTINCARTMANAGMENT/api/v1/productsInCart/" + clientId,
+                    "http://productincartmanagment:8082/api/v1/productsInCart/" + clientId,
                     HttpMethod.GET, null,
                     new ParameterizedTypeReference<List<ProductInCartDTO>>() {}
             );
@@ -90,7 +90,7 @@ public class ClientServiceImp implements ClientService {
     private List<OrderDTO> fetchOrders(Long clientId) {
         try {
             ResponseEntity<List<OrderDTO>> response = restTemplate.exchange(
-                    "http://ORDERMANAGMENT/api/v1/orders/" + clientId,
+                    "http://ordermanagment:8081/api/v1/orders/" + clientId,
                     HttpMethod.GET, null,
                     new ParameterizedTypeReference<List<OrderDTO>>() {});
             return response.getBody();

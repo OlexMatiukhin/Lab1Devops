@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ordermanagment
+  namespace: ecommerce
+  labels:
+    app: ordermanagment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ordermanagment
+  template:
+    metadata:
+      labels:
+        app: ordermanagment
+    spec:
+      initContainers:
+        - name: wait-for-configserver
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://configserver:8888/actuator/health | grep -q UP; do
+                echo "Waiting for configserver..."; sleep 5;
+              done
+        - name: wait-for-db
+          image: postgres:16
+          command:
+            - sh
+            - -c
+            - |
+              until pg_isready -h db -U postgres; do
+                echo "Waiting for db..."; sleep 5;
+              done
+      containers:
+        - name: ordermanagment
+          image: microservices5-ordermanagment:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              value: "configserver:http://configserver:8888"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "docker"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 180
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 15
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 210
+            periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 5

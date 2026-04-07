@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: ecommerce
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      initContainers:
+        - name: wait-for-clientmanagment
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://clientmanagment:8080/actuator/health | grep -q UP; do
+                echo "Waiting for clientmanagment..."; sleep 5;
+              done
+        - name: wait-for-ordermanagment
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://ordermanagment:8081/actuator/health | grep -q UP; do
+                echo "Waiting for ordermanagment..."; sleep 5;
+              done
+        - name: wait-for-productincartmanagment
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://productincartmanagment:8082/actuator/health | grep -q UP; do
+                echo "Waiting for productincartmanagment..."; sleep 5;
+              done
+        - name: wait-for-productmanagment
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://productmanagment:8083/actuator/health | grep -q UP; do
+                echo "Waiting for productmanagment..."; sleep 5;
+              done
+      containers:
+        - name: frontend
+          image: microservices5-frontend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 180
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 180
+            periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 5

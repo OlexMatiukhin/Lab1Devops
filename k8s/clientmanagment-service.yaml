@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clientmanagment
+  namespace: ecommerce
+spec:
+  selector:
+    app: clientmanagment
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: ClusterIP

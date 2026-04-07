@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Workplace file has been fixed was eliminated!">
-      <change afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
+    <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Eureka were removed from fuctional on">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2026_10_37_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2026_10_37__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2026_23_52_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2026_23_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="kubctl-only" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,10 +111,10 @@
     &quot;Spring Boot.OrderMangmentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ProductInCartManagmentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ProductManagmentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gitactions&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;helm-deploy&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/Desktop/Institute/Microservices/Microservices5/ProductManagment/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/Desktop/Institute/Microservices/Microservices5/k8s&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -127,13 +130,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sasha\Desktop\Institute\Microservices\Microservices5\k8s" />
       <recent name="C:\Users\sasha\Desktop\Institute\Microservices\Microservices5\ProductManagment\src\main\resources" />
       <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ClientManagment\src\main\java\edu3431\matiukhin\clientmanagment" />
       <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\OrderMangment\src\main\java\edu3431\matiukhin\ordermangment" />
       <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ProductInCartManagment\src\main\java\edu3431\matiukhin\productincartmanagment" />
-      <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\ProductManagment\src\main\java\edu3431\matiukhin\productmanagment" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sasha\Desktop\Institute\Microservices\Microservices5\k8s" />
       <recent name="C:\Users\sasha\Desktop\Інститут\Microservices\Microservices5\eureka-server" />
     </key>
   </component>
@@ -366,6 +370,14 @@
       <workItem from="1774466870426" duration="11513000" />
       <workItem from="1774512705456" duration="13033000" />
       <workItem from="1774531224229" duration="6157000" />
+      <workItem from="1774776384829" duration="10267000" />
+      <workItem from="1774860858963" duration="23670000" />
+      <workItem from="1774885593175" duration="11823000" />
+      <workItem from="1774940272087" duration="14220000" />
+      <workItem from="1774971659954" duration="1846000" />
+      <workItem from="1774974364178" duration="3054000" />
+      <workItem from="1774988559112" duration="5356000" />
+      <workItem from="1775544882425" duration="5368000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate project">
       <option name="closed" value="true" />
@@ -487,7 +499,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774648376636</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Workplace file has been fixed was eliminated!">
+      <option name="closed" value="true" />
+      <created>1774690283406</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1774690283406</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Eureka were removed from fuctional on">
+      <option name="closed" value="true" />
+      <created>1774942415218</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1774942415218</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +526,8 @@
     <MESSAGE value="Push on github" />
     <MESSAGE value="Odd lib export was eliminated!" />
     <MESSAGE value="Workplace file has been fixed was eliminated!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workplace file has been fixed was eliminated!" />
+    <MESSAGE value="Eureka were removed from fuctional on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eureka were removed from fuctional on" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,11 +541,6 @@
           <url>file://$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java</url>
           <line>106</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProductManagment/src/main/java/edu3431/matiukhin/productmanagment/ProductManagmentApplication.java</url>
@@ -547,16 +571,6 @@
           <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/mapper/ProductInCartMapper.java</url>
           <line>7</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProductManagment/src/test/java/edu3431/matiukhin/productmanagment/ProductManagmentApplicationTests.java</url>

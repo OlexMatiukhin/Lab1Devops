@@ -3,7 +3,10 @@ spring:
     name: productincartmanagment
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://configserver:8888
+  cloud:
+    discovery:
+      enabled: false
 management:
   endpoints:
     web:
@@ -12,6 +15,9 @@ management:
   endpoint:
     health:
       show-details: always
+eureka:
+  client:
+    enabled: false
 
 
 

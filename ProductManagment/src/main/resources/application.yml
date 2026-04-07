@@ -3,10 +3,10 @@ spring:
     name: productmanagment
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://configserver:8888
 
   cloud:
-    compatibility-verifier:
+    discovery:
       enabled: false
 management:
   endpoints:
@@ -16,3 +16,6 @@ management:
   endpoint:
     health:
       show-details: always
+eureka:
+  client:
+    enabled: false
