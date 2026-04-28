@@ -1,0 +1,68 @@
+{{- if .Values.productincartmanagment.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.productincartmanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: productincartmanagment
+spec:
+  replicas: {{ .Values.productincartmanagment.replicas }}
+  selector:
+    matchLabels:
+      app: productincartmanagment
+  template:
+    metadata:
+      labels:
+        app: productincartmanagment
+    spec:
+      initContainers:
+        - name: wait-for-configserver
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://{{ .Values.configserver.service.name }}:{{ .Values.configserver.service.port }}/actuator/health | grep -q UP; do
+                echo "Waiting for configserver..."; sleep 5;
+              done
+        {{- if .Values.postgresql.enabled }}
+        - name: wait-for-db
+          image: postgres:16
+          command:
+            - sh
+            - -c
+            - |
+              until pg_isready -h db -U postgres; do
+                echo "Waiting for db..."; sleep 5;
+              done
+        {{- end }}
+      containers:
+        - name: productincartmanagment
+          image: {{ .Values.productincartmanagment.image }}
+          imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+          ports:
+            - containerPort: {{ .Values.productincartmanagment.service.port }}
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              value: {{ .Values.productincartmanagment.configImport | quote }}
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.productincartmanagment.profilesActive | quote }}
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.productincartmanagment.service.port }}
+            initialDelaySeconds: {{ .Values.productincartmanagment.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.productincartmanagment.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.productincartmanagment.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.productincartmanagment.readinessProbe.failureThreshold }}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.productincartmanagment.service.port }}
+            initialDelaySeconds: {{ .Values.productincartmanagment.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.productincartmanagment.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.productincartmanagment.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.productincartmanagment.livenessProbe.failureThreshold }}
+{{- end }}

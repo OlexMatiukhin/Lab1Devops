@@ -1,0 +1,11 @@
+{{- if .Values.configRepo.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configRepo.configMapName }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+data:
+{{- (.Files.Glob "files/config-repo/*").AsConfig | nindent 2 }}
+{{- end }}

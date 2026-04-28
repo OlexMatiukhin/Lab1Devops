@@ -1,0 +1,17 @@
+{{- if .Values.eureka.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.eureka.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: eureka
+spec:
+  selector:
+    app: eureka
+  ports:
+    - port: {{ .Values.eureka.service.port }}
+      targetPort: {{ .Values.eureka.service.port }}
+  type: {{ .Values.eureka.service.type }}
+{{- end }}

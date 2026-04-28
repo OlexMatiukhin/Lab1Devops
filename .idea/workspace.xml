@@ -4,42 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/k8s/clientmanagement-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/clientmanagment-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/configmap-config-repo.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/configmap-init-sql.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/configserver-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/configserver-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/db-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/eureka-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/eureka-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/frontend-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/frontend-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/namespace.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/ordermanagment-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/ordermanagment-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/productincartmanagment-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/productincartmanagment-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/productmanagment-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/productmanagment-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/pvc.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/secret.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="49c0d9f9-9b32-4af3-b2a8-bb086c6aa4a9" name="Changes" comment="Eureka were removed from fuctional on">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2026_10_37_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2026_10_37__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2026_23_52_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2026_23_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/java/edu3431/matiukhin/clientmanagment/service/ClientServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientManagment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientManagment/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/java/edu3431/matiukhin/ordermangment/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderMangment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderMangment/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/controller/ProductInCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/java/edu3431/matiukhin/productincartmanagment/service/ProductInCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductInCartManagment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductInCartManagment/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductManagment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductManagment/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="kubctl-only" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,7 +111,7 @@
     &quot;Spring Boot.OrderMangmentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ProductInCartManagmentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ProductManagmentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;kubctl-only&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;helm-deploy&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/Desktop/Institute/Microservices/Microservices5/k8s&quot;,
@@ -403,7 +373,15 @@
       <workItem from="1774776384829" duration="10267000" />
       <workItem from="1774860858963" duration="23670000" />
       <workItem from="1774885593175" duration="11823000" />
-      <workItem from="1774940272087" duration="1783000" />
+      <workItem from="1774940272087" duration="14220000" />
+      <workItem from="1774971659954" duration="1846000" />
+      <workItem from="1774974364178" duration="3054000" />
+      <workItem from="1774988559112" duration="5356000" />
+      <workItem from="1775544882425" duration="5368000" />
+      <workItem from="1775561224810" duration="217000" />
+      <workItem from="1775561563287" duration="875000" />
+      <workItem from="1777238354926" duration="25000" />
+      <workItem from="1777357268593" duration="12847000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate project">
       <option name="closed" value="true" />
@@ -533,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774690283406</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Eureka were removed from fuctional on">
+      <option name="closed" value="true" />
+      <created>1774942415218</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1774942415218</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +530,8 @@
     <MESSAGE value="Push on github" />
     <MESSAGE value="Odd lib export was eliminated!" />
     <MESSAGE value="Workplace file has been fixed was eliminated!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workplace file has been fixed was eliminated!" />
+    <MESSAGE value="Eureka were removed from fuctional on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eureka were removed from fuctional on" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

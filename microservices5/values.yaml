@@ -1,0 +1,184 @@
+namespace: ecommerce-helm
+
+global:
+  imagePullPolicy: IfNotPresent
+
+postgresql:
+  enabled: true
+  # Keep DNS name "db" to match existing configs:
+  # jdbc:postgresql://db:5432/...
+  fullnameOverride: db
+  auth:
+    # Existing config-repo uses postgres/admin
+    username: postgres
+    password: admin
+    postgresPassword: admin
+  primary:
+    persistence:
+      enabled: true
+      size: 2Gi
+    initdb:
+      scripts:
+        init.sql: |
+          CREATE DATABASE clients_db;
+          CREATE DATABASE orders_db;
+          CREATE DATABASE products_db;
+          CREATE DATABASE productincart_db;
+
+configRepo:
+  enabled: true
+  configMapName: config-repo
+
+eureka:
+  enabled: false
+  image: microservices5-eureka:latest
+  replicas: 1
+  service:
+    name: eureka
+    port: 8761
+    type: ClusterIP
+  configServerUrl: http://configserver:8888
+  readinessProbe:
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 90
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+
+configserver:
+  enabled: true
+  image: microservices5-configserver:latest
+  replicas: 1
+  service:
+    name: configserver
+    port: 8888
+    type: ClusterIP
+  profilesActive: native
+  nativeSearchLocations: file:/config-repo
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+
+clientmanagment:
+  enabled: true
+  image: microservices5-clientmanagment:latest
+  replicas: 1
+  service:
+    name: clientmanagment
+    port: 8080
+    type: ClusterIP
+  configImport: configserver:http://configserver:8888
+  profilesActive: docker
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 210
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+
+ordermanagment:
+  enabled: true
+  image: microservices5-ordermanagment:latest
+  replicas: 1
+  service:
+    name: ordermanagment
+    port: 8081
+    type: ClusterIP
+  configImport: configserver:http://configserver:8888
+  profilesActive: docker
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 210
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+
+productincartmanagment:
+  enabled: true
+  image: microservices5-productincartmanagment:latest
+  replicas: 1
+  service:
+    name: productincartmanagment
+    port: 8082
+    type: ClusterIP
+  configImport: configserver:http://configserver:8888
+  profilesActive: docker
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 210
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+
+productmanagment:
+  enabled: true
+  image: microservices5-productmanagment:latest
+  replicas: 1
+  service:
+    name: productmanagment
+    port: 8083
+    type: ClusterIP
+  configImport: configserver:http://configserver:8888
+  profilesActive: docker
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 15
+  livenessProbe:
+    initialDelaySeconds: 210
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+
+frontend:
+  enabled: true
+  image: microservices5-frontend:latest
+  replicas: 1
+  service:
+    name: frontend
+    port: 3000
+    type: NodePort
+    nodePort: 30000
+  readinessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 10
+  livenessProbe:
+    initialDelaySeconds: 180
+    periodSeconds: 15
+    timeoutSeconds: 5
+    failureThreshold: 5
+  waitFor:
+    - name: clientmanagment
+      url: http://clientmanagment:8080/actuator/health
+    - name: ordermanagment
+      url: http://ordermanagment:8081/actuator/health
+    - name: productincartmanagment
+      url: http://productincartmanagment:8082/actuator/health
+    - name: productmanagment
+      url: http://productmanagment:8083/actuator/health

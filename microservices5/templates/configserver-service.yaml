@@ -1,0 +1,17 @@
+{{- if .Values.configserver.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.configserver.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: configserver
+spec:
+  selector:
+    app: configserver
+  ports:
+    - port: {{ .Values.configserver.service.port }}
+      targetPort: {{ .Values.configserver.service.port }}
+  type: {{ .Values.configserver.service.type }}
+{{- end }}

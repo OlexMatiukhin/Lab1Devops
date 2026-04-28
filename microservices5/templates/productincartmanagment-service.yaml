@@ -1,0 +1,17 @@
+{{- if .Values.productincartmanagment.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.productincartmanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: productincartmanagment
+spec:
+  selector:
+    app: productincartmanagment
+  ports:
+    - port: {{ .Values.productincartmanagment.service.port }}
+      targetPort: {{ .Values.productincartmanagment.service.port }}
+  type: {{ .Values.productincartmanagment.service.type }}
+{{- end }}

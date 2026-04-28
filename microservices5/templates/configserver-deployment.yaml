@@ -1,0 +1,54 @@
+{{- if .Values.configserver.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.configserver.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: configserver
+spec:
+  replicas: {{ .Values.configserver.replicas }}
+  selector:
+    matchLabels:
+      app: configserver
+  template:
+    metadata:
+      labels:
+        app: configserver
+    spec:
+      containers:
+        - name: configserver
+          image: {{ .Values.configserver.image }}
+          imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+          ports:
+            - containerPort: {{ .Values.configserver.service.port }}
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.configserver.profilesActive | quote }}
+            - name: SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS
+              value: {{ .Values.configserver.nativeSearchLocations | quote }}
+          volumeMounts:
+            - name: config-repo
+              mountPath: /config-repo
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.configserver.service.port }}
+            initialDelaySeconds: {{ .Values.configserver.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.configserver.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.configserver.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.configserver.readinessProbe.failureThreshold }}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.configserver.service.port }}
+            initialDelaySeconds: {{ .Values.configserver.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.configserver.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.configserver.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.configserver.livenessProbe.failureThreshold }}
+      volumes:
+        - name: config-repo
+          configMap:
+            name: {{ .Values.configRepo.configMapName }}
+{{- end }}

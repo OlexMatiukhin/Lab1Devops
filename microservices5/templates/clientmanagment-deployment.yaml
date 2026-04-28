@@ -1,0 +1,68 @@
+{{- if .Values.clientmanagment.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.clientmanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: clientmanagment
+spec:
+  replicas: {{ .Values.clientmanagment.replicas }}
+  selector:
+    matchLabels:
+      app: clientmanagment
+  template:
+    metadata:
+      labels:
+        app: clientmanagment
+    spec:
+      initContainers:
+        - name: wait-for-configserver
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS http://{{ .Values.configserver.service.name }}:{{ .Values.configserver.service.port }}/actuator/health | grep -q UP; do
+                echo "Waiting for configserver..."; sleep 5;
+              done
+        {{- if .Values.postgresql.enabled }}
+        - name: wait-for-db
+          image: postgres:16
+          command:
+            - sh
+            - -c
+            - |
+              until pg_isready -h db -U postgres; do
+                echo "Waiting for db..."; sleep 5;
+              done
+        {{- end }}
+      containers:
+        - name: clientmanagment
+          image: {{ .Values.clientmanagment.image }}
+          imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+          ports:
+            - containerPort: {{ .Values.clientmanagment.service.port }}
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              value: {{ .Values.clientmanagment.configImport | quote }}
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.clientmanagment.profilesActive | quote }}
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.clientmanagment.service.port }}
+            initialDelaySeconds: {{ .Values.clientmanagment.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.clientmanagment.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.clientmanagment.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.clientmanagment.readinessProbe.failureThreshold }}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.clientmanagment.service.port }}
+            initialDelaySeconds: {{ .Values.clientmanagment.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.clientmanagment.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.clientmanagment.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.clientmanagment.livenessProbe.failureThreshold }}
+{{- end }}

@@ -1,0 +1,55 @@
+{{- if .Values.eureka.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.eureka.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: eureka
+spec:
+  replicas: {{ .Values.eureka.replicas }}
+  selector:
+    matchLabels:
+      app: eureka
+  template:
+    metadata:
+      labels:
+        app: eureka
+    spec:
+      initContainers:
+        - name: wait-for-configserver
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -fsS {{ .Values.eureka.configServerUrl }}/actuator/health | grep -q UP; do
+                echo "Waiting for configserver..."; sleep 5;
+              done
+      containers:
+        - name: eureka
+          image: {{ .Values.eureka.image }}
+          imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+          ports:
+            - containerPort: {{ .Values.eureka.service.port }}
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              value: {{ printf "configserver:%s" .Values.eureka.configServerUrl | quote }}
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.eureka.service.port }}
+            initialDelaySeconds: {{ .Values.eureka.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.eureka.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.eureka.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.eureka.readinessProbe.failureThreshold }}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: {{ .Values.eureka.service.port }}
+            initialDelaySeconds: {{ .Values.eureka.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.eureka.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.eureka.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.eureka.livenessProbe.failureThreshold }}
+{{- end }}

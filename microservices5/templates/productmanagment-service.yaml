@@ -1,0 +1,17 @@
+{{- if .Values.productmanagment.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.productmanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: productmanagment
+spec:
+  selector:
+    app: productmanagment
+  ports:
+    - port: {{ .Values.productmanagment.service.port }}
+      targetPort: {{ .Values.productmanagment.service.port }}
+  type: {{ .Values.productmanagment.service.type }}
+{{- end }}

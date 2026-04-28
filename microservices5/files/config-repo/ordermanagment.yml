@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: ordermanagment
+  datasource:
+    url: jdbc:postgresql://db:5432/orders_db
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    discovery:
+      enabled: false
+server:
+  port: 8081
+logging:
+  level:
+    org.springframework.cloud.bootstrap.config: DEBUG
+    org.springframework.cloud.config.client.ConfigServicePropertySourceLocator: DEBUG
+eureka:
+  client:
+    enabled: false

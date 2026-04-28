@@ -1,0 +1,17 @@
+{{- if .Values.clientmanagment.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.clientmanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: clientmanagment
+spec:
+  selector:
+    app: clientmanagment
+  ports:
+    - port: {{ .Values.clientmanagment.service.port }}
+      targetPort: {{ .Values.clientmanagment.service.port }}
+  type: {{ .Values.clientmanagment.service.type }}
+{{- end }}

@@ -1,0 +1,17 @@
+{{- if .Values.ordermanagment.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.ordermanagment.service.name }}
+  namespace: {{ include "microservices5.namespace" . }}
+  labels:
+    {{- include "microservices5.labels" . | nindent 4 }}
+    app: ordermanagment
+spec:
+  selector:
+    app: ordermanagment
+  ports:
+    - port: {{ .Values.ordermanagment.service.port }}
+      targetPort: {{ .Values.ordermanagment.service.port }}
+  type: {{ .Values.ordermanagment.service.type }}
+{{- end }}
